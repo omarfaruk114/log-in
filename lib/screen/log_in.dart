@@ -41,7 +41,7 @@ class _LogInState extends State<LogIn> {
                   borderSide: BorderSide(
                     color: allColor.appColor,
                   ),
-                  borderRadius: BorderRadius.circular(15)
+                  borderRadius: BorderRadius.circular(15),
 
                 )
               ),
