@@ -23,7 +23,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
     return  Padding(
       padding: const EdgeInsets.only(left: 28.0,right: 28),
       child: TextFormField(
-        obscureText: true,
+        obscureText: widget.obsecureVal,
+        controller: widget.controller,
         cursorColor: allColor.appColor,
         decoration: InputDecoration(
             focusedBorder: OutlineInputBorder(
@@ -32,11 +33,11 @@ class _CustomTextFieldState extends State<CustomTextField> {
                 ),
                 borderRadius: BorderRadius.circular(15)
             ),
-            labelText: "Email",
+            labelText: widget.labelText,
             labelStyle: TextStyle(
                 color: allColor.appColor
             ),
-            hintText: "Enter your email",
+            hintText: widget.hintText,
             border:OutlineInputBorder(
               borderSide: BorderSide(
                 color: allColor.appColor,
