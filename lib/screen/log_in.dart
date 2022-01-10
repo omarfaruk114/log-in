@@ -1,3 +1,4 @@
+import 'package:finalwork/helper/custom_text_field.dart';
 import 'package:finalwork/utills/all_color.dart';
 import 'package:flutter/material.dart';
 class LogIn extends StatefulWidget {
@@ -6,6 +7,9 @@ class LogIn extends StatefulWidget {
   @override
   _LogInState createState() => _LogInState();
 }
+TextEditingController _emailController = TextEditingController();
+TextEditingController _passController = TextEditingController();
+
 AllColor allColor = AllColor();
 class _LogInState extends State<LogIn> {
   @override
@@ -21,32 +25,22 @@ class _LogInState extends State<LogIn> {
           SizedBox(
             height: 80,
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 28.0,right: 28),
-            child: TextFormField(
-              cursorColor: allColor.appColor,
-              decoration: InputDecoration(
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    color: allColor.appColor
-                  ),
-                    borderRadius: BorderRadius.circular(15)
-                ),
-                labelText: "Email",
-                labelStyle: TextStyle(
-                  color: allColor.appColor
-                ),
-                hintText: "Enter your email",
-                border:OutlineInputBorder(
-                  borderSide: BorderSide(
-                    color: allColor.appColor,
-                  ),
-                  borderRadius: BorderRadius.circular(15),
+        CustomTextField(
+          hintText: "Enter Your Email",
+          labelText: "Email",
+          controller: _emailController,
+          obsecureVal: false,
+        ),
+          SizedBox(
+            height: 15,
 
-                )
-              ),
-            ),
-          )
+          ),
+          CustomTextField(
+            hintText: "Enter Your Password",
+            labelText: "Password",
+            controller: _passController,
+            obsecureVal: true,
+          ),
         ],
       ),
     );
