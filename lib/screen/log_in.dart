@@ -1,3 +1,4 @@
+import 'package:finalwork/helper/custom_button.dart';
 import 'package:finalwork/helper/custom_text_field.dart';
 import 'package:finalwork/utills/all_color.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +12,8 @@ TextEditingController _emailController = TextEditingController();
 TextEditingController _passController = TextEditingController();
 
 AllColor allColor = AllColor();
+TextEditingController _emailControllerr=TextEditingController();
+TextEditingController _passControllerr=TextEditingController();
 class _LogInState extends State<LogIn> {
   @override
   Widget build(BuildContext context) {
@@ -41,6 +44,11 @@ class _LogInState extends State<LogIn> {
             controller: _passController,
             obsecureVal: true,
           ),
+          SizedBox(
+            height: 15,
+
+          ),
+          CustomButton()
         ],
       ),
     );
