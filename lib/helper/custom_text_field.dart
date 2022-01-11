@@ -5,6 +5,7 @@ class CustomTextField extends StatefulWidget {
   String labelText;
   TextEditingController controller;
   bool obsecureVal;
+
    CustomTextField({Key? key,
      required this.hintText,
      required this.labelText,

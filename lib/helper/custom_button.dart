@@ -1,7 +1,15 @@
 import 'package:finalwork/utills/all_color.dart';
 import 'package:flutter/material.dart';
+
 class CustomButton extends StatefulWidget {
-  const CustomButton({Key? key}) : super(key: key);
+  double height ;
+  double width ;
+  String btnText;
+   CustomButton({Key? key,
+  required this.width,
+     required this.height,
+     required this.btnText
+  }) : super(key: key);
 
   @override
   _CustomButtonState createState() => _CustomButtonState();
@@ -12,13 +20,13 @@ class _CustomButtonState extends State<CustomButton> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60,
-      width: 200,
+      height: widget.height,
+      width: widget.width,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         color: _allColor.appColor
       ),
-      child: Center(child: Text("Log IN",
+      child: Center(child: Text(widget.btnText,
       style: TextStyle(color: Colors.white,
       fontSize: 18, fontWeight: FontWeight.bold),)),
     );

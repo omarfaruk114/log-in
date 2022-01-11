@@ -1,5 +1,6 @@
 import 'package:finalwork/helper/custom_button.dart';
 import 'package:finalwork/helper/custom_text_field.dart';
+import 'package:finalwork/screen/home_page.dart';
 import 'package:finalwork/utills/all_color.dart';
 import 'package:flutter/material.dart';
 class LogIn extends StatefulWidget {
@@ -48,7 +49,30 @@ class _LogInState extends State<LogIn> {
             height: 15,
 
           ),
-          CustomButton()
+          InkWell(
+            onTap :(){
+              Navigator.push(context, MaterialPageRoute
+                (builder: (context)=>HomePage()));
+          },
+            child: CustomButton(
+              height :60,
+              width: 300,
+              btnText :"LOG IN"
+            ),
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text("Don`t have an account",
+              style: TextStyle(fontSize: 18),),
+              Text("Sing Up!",
+                  style: TextStyle(fontSize: 18,
+                  color: allColor.appColor)),
+            ],
+          )
         ],
       ),
     );
