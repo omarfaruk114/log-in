@@ -5,6 +5,7 @@ class CustomTextField extends StatefulWidget {
   String labelText;
   TextEditingController controller;
   bool obsecureVal;
+
    CustomTextField({Key? key,
      required this.hintText,
      required this.labelText,
@@ -23,6 +24,23 @@ class _CustomTextFieldState extends State<CustomTextField> {
     return  Padding(
       padding: const EdgeInsets.only(left: 28.0,right: 28),
       child: TextFormField(
+        validator: (value){
+          bool emailValid = RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+              .hasMatch(value!);
+          if(value!.isEmpty){
+            return "This field can not empty!";
+          }
+          if(widget.labelText=="Email"){
+            if(!emailValid)
+              return "Email format is not correct!";
+          }
+          if(widget.labelText=="Password")
+            {
+              if(value.length<8)
+                return "Password must be atleast 8 char!";
+            }
+        },
+
         obscureText: widget.obsecureVal,
         controller: widget.controller,
         cursorColor: allColor.appColor,
