@@ -17,7 +17,9 @@ class CustomTextField extends StatefulWidget {
   _CustomTextFieldState createState() => _CustomTextFieldState();
 }
 
+final GlobalKey<FormState> _formKey=GlobalKey();
 AllColor allColor = AllColor();
+String passStore="";
 class _CustomTextFieldState extends State<CustomTextField> {
   @override
   Widget build(BuildContext context) {
@@ -36,9 +38,15 @@ class _CustomTextFieldState extends State<CustomTextField> {
           }
           if(widget.labelText=="Password")
             {
+              passStore=value;
               if(value.length<8)
                 return "Password must be atleast 8 char!";
             }
+          if(widget.labelText=="Confirm Password"){
+            if(passStore!=value){
+              return"Password didn`t match!";
+            }
+          }
         },
 
         obscureText: widget.obsecureVal,

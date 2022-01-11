@@ -56,8 +56,12 @@ class _LogInState extends State<LogIn> {
             InkWell(
               onTap :(){
                 if(_formKey.currentState!.validate())
-                Navigator.push(context, MaterialPageRoute
-                  (builder: (context)=>HomePage()));
+                {
+                  if(_emailController.text=="omarfaruk119810@gmail.com"&&
+                  _passController.text=="cute girl")
+                  Navigator.push(context, MaterialPageRoute
+                    (builder: (context)=>HomePage()));
+                }
             },
               child: CustomButton(
                 height :60,
