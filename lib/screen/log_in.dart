@@ -58,7 +58,7 @@ class _LogInState extends State<LogIn> {
                 if(_formKey.currentState!.validate())
                 {
                   if(_emailController.text=="omarfaruk119810@gmail.com"&&
-                  _passController.text=="cute girl")
+                  _passController.text=="cute boy")
                   Navigator.push(context, MaterialPageRoute
                     (builder: (context)=>HomePage()));
                 }
