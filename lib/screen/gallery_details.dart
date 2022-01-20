@@ -14,6 +14,7 @@ class _GalleryDetailsState extends State<GalleryDetails> {
       appBar: AppBar(),
       body: Container(
         color: Colors.black,
+        height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child: Image.asset(widget.img),
       ),

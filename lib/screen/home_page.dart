@@ -10,15 +10,15 @@ class HomePage extends StatefulWidget {
 double containerHeight = 90;
 double containerWidth = 90;
 List<String> imgList=[
-  "assets/image/img001.jpg",
-  "assets/image/img002.jpg",
-  "assets/image/img003.jpg",
-  "assets/image/img004.jpg",
-  "assets/image/img005.jpg",
-  "assets/image/img006.jpg",
-  "assets/image/img007.jpg",
-  "assets/image/img008.jpg",
-  "assets/image/img009.jpg",
+  "assets/images/img001.jpg",
+  "assets/images/img002.jpg",
+  "assets/images/img003.jpg",
+  "assets/images/img004.jpg",
+  "assets/images/img005.jpg",
+  "assets/images/img006.jpg",
+  "assets/images/img007.jpg",
+  "assets/images/img008.jpg",
+  "assets/images/img009.jpg",
 
 ];
 class _HomePageState extends State<HomePage> {
