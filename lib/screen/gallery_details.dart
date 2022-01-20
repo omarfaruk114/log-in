@@ -13,6 +13,8 @@ class _GalleryDetailsState extends State<GalleryDetails> {
     return Scaffold(
       appBar: AppBar(),
       body: Container(
+        color: Colors.black,
+        width: MediaQuery.of(context).size.width,
         child: Image.asset(widget.img),
       ),
     );
